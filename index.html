@@ -34,7 +34,7 @@
   header .wrap{display:flex; justify-content:space-between; align-items:center;}
   .brand{font-weight:700; font-size:1.05rem; letter-spacing:0.02em; display:flex; align-items:center; gap:10px;}
   .brand img{height:30px; width:30px; border-radius:4px;}
-  .brand span{color:var(--clay);}
+  .brand span, .dash{color:var(--clay); margin:0; padding:0; letter-spacing:normal;}
   nav a{color:var(--ink); text-decoration:none; margin-left:28px; font-size:0.92rem;}
   nav a:hover{color:var(--clay);}
 
@@ -106,7 +106,7 @@
 
 <header>
   <div class="wrap">
-    <div class="brand"><img src="logo.svg" alt="NALA logo">NALA<span>-</span> Digital Marketing Services</div>
+    <div class="brand" style="text-transform:uppercase; font-weight:800;"><img src="logo.svg" alt="NALA logo"><span class="brand-text">NALA<span class="dash">-</span> DIGITAL MARKETING SERVICES</span></div>
     <nav>
       <a href="#services">Services</a>
       <a href="#projects">Work</a>
@@ -174,7 +174,7 @@
       </div>
       <div class="detail">
         <dt>Registered owner</dt>
-        <dd style="font-weight:800;">Romeo Credo Cuyacot</dd>
+        <dd>ROMEO CREDO CUYACOT</dd>
       </div>
       <div class="detail">
         <dt>DTI Business Name No.</dt>
