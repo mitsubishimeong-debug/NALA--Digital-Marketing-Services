@@ -3,103 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NALA- Digital Marketing Services</title>
+<title>NALA- Digital Marketing Services | Digital Marketing, Built to Perform.</title>
 <meta name="facebook-domain-verification" content="s3dkjlig1qn6144d53olcujcap681d" />
-<meta name="description" content="NALA- Digital Marketing Services — digital marketing services based in Talon Dos, Las Piñas City, NCR, Philippines. DTI registered.">
+<meta name="description" content="NALA- Digital Marketing Services — digital marketing, paid advertising, automation and CRM solutions for businesses in Talon Dos, Las Piñas City, NCR, Philippines. DTI registered.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#14213d;
-    --paper:#fbf9f4;
-    --clay:#c65d3b;
-    --moss:#3c5b4a;
-    --line:#dcd6c8;
-    --muted:#5a6270;
+    --navy-deep:#0a1424;
+    --navy:#0f1e38;
+    --panel:#152a4a;
+    --panel-line:rgba(255,255,255,0.09);
+    --white:#ffffff;
+    --off-white:#f6f4ee;
+    --charcoal:#262a31;
+    --rust:#c1592f;
+    --rust-light:#e08a56;
+    --muted-on-navy:#95a1b8;
+    --muted-on-light:#6a6f7a;
+    --line-on-light:#e2ded2;
+    --display:'Fraunces', Georgia, serif;
+    --body:'Inter', 'Helvetica Neue', Arial, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    line-height:1.55;
+    background:var(--off-white);
+    color:var(--charcoal);
+    font-family:var(--body);
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
-  .wrap{max-width:960px; margin:0 auto; padding:0 28px;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
 
-  header{
-    padding:22px 0;
-    border-bottom:1px solid var(--line);
-    position:sticky; top:0; background:var(--paper); z-index:10;
-  }
-  header .wrap{display:flex; justify-content:space-between; align-items:center;}
-  .brand{font-weight:700; font-size:1.05rem; letter-spacing:0.02em; display:flex; align-items:center; gap:10px;}
-  .brand img{height:30px; width:30px; border-radius:4px;}
-  .brand span, .dash{color:var(--clay); margin:0; padding:0; letter-spacing:normal;}
-  nav a{color:var(--ink); text-decoration:none; margin-left:28px; font-size:0.92rem;}
-  nav a:hover{color:var(--clay);}
-
-  .hero{
-    padding:96px 0 72px;
-    border-bottom:1px solid var(--line);
-  }
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:-0.01em;}
   .eyebrow{
-    text-transform:uppercase; letter-spacing:0.14em; font-size:0.72rem;
-    color:var(--muted); margin-bottom:18px; font-weight:600;
+    text-transform:uppercase; letter-spacing:0.16em; font-size:0.72rem;
+    font-weight:600; color:var(--rust);
   }
-  h1{
-    font-size:clamp(2.1rem, 5vw, 3.4rem);
-    font-weight:800;
-    letter-spacing:-0.01em;
-    max-width:15ch;
-    margin-bottom:22px;
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,20,36,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--panel-line);
   }
-  h1 em{color:var(--clay); font-style:normal;}
-  .lede{
-    font-size:1.1rem; color:var(--muted); max-width:52ch; margin-bottom:34px;
+  header .wrap{display:flex; align-items:center; justify-content:space-between; height:78px;}
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    font-family:var(--display); font-weight:600; font-size:1rem;
+    color:var(--white); text-decoration:none; letter-spacing:0.01em;
   }
-  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .brand img{height:32px; width:32px; border-radius:5px;}
+  .brand .dash{color:var(--rust);}
+  .brand .sub{font-family:var(--body); font-weight:500; font-size:0.98rem; letter-spacing:0.06em;}
+
+  nav.primary-nav{display:flex; align-items:center; gap:6px;}
+  nav.primary-nav a{
+    color:var(--muted-on-navy); text-decoration:none; font-size:0.9rem; font-weight:500;
+    padding:9px 16px; border-radius:3px; position:relative; transition:color .2s ease;
+  }
+  nav.primary-nav a:hover{color:var(--white);}
+  nav.primary-nav a.active{color:var(--white);}
+  nav.primary-nav a.active::after{
+    content:''; position:absolute; left:16px; right:16px; bottom:4px; height:2px; background:var(--rust);
+  }
+  .header-cta{display:flex; align-items:center; gap:14px;}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:2px;
-    font-size:0.92rem; font-weight:600; text-decoration:none;
-    border:1px solid var(--ink);
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:12px 24px; border-radius:3px; font-size:0.86rem; font-weight:600;
+    text-decoration:none; letter-spacing:0.03em; text-transform:uppercase;
+    border:1px solid transparent; cursor:pointer; transition:transform .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
   }
-  .btn.primary{background:var(--ink); color:var(--paper);}
-  .btn.ghost{background:transparent; color:var(--ink);}
+  .btn.rust{background:var(--rust); color:var(--white);}
+  .btn.rust:hover{background:var(--rust-light); transform:translateY(-1px);}
+  .btn.outline-dark{border-color:rgba(255,255,255,0.28); color:var(--white);}
+  .btn.outline-dark:hover{border-color:var(--white);}
+  .btn.outline-light{border-color:var(--charcoal); color:var(--charcoal);}
+  .btn.outline-light:hover{background:var(--charcoal); color:var(--white);}
+  .btn.ghost-navy{color:var(--navy); text-decoration:underline; text-underline-offset:4px; text-transform:none; letter-spacing:0; padding:12px 4px;}
 
-  section{padding:64px 0; border-bottom:1px solid var(--line);}
-  .section-head{display:flex; align-items:baseline; gap:16px; margin-bottom:36px;}
-  .section-num{color:var(--clay); font-weight:700; font-size:0.85rem;}
-  h2{font-size:1.6rem; font-weight:800;}
+  .menu-toggle{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;}
+  .menu-toggle span{width:22px; height:2px; background:var(--white); display:block;}
 
-  .services{display:grid; grid-template-columns:repeat(2, 1fr); gap:28px;}
-  .service{border-left:2px solid var(--moss); padding-left:18px;}
-  .service h3{font-size:1.05rem; margin-bottom:8px;}
-  .service p{color:var(--muted); font-size:0.95rem;}
+  /* ===== Hero ===== */
+  .hero{
+    background:var(--navy-deep);
+    background-image:radial-gradient(ellipse 900px 500px at 82% 12%, rgba(193,89,47,0.14), transparent 60%);
+    color:var(--white);
+    padding:108px 0 90px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
+  .hero-copy .eyebrow{margin-bottom:22px; display:block;}
+  .hero h1{
+    font-size:clamp(2.5rem, 4.6vw, 3.8rem);
+    line-height:1.08;
+    max-width:14ch;
+    margin-bottom:26px;
+    color:var(--white);
+  }
+  .hero h1 .accent{color:var(--rust-light); font-style:italic; font-weight:500;}
+  .hero .lede{
+    font-size:1.08rem; color:var(--muted-on-navy); max-width:46ch; margin-bottom:36px;
+  }
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:34px;}
+  .category-line{
+    font-size:0.74rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--muted-on-navy); font-weight:600;
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  .category-line .dot{color:var(--rust);}
 
-  .about p{max-width:64ch; color:var(--ink);}
-  .about p + p{margin-top:14px;}
+  /* signature hero graphic: connected systems */
+  .hero-graphic{position:relative; display:flex; align-items:center; justify-content:center;}
+  .hero-graphic svg{width:100%; height:auto; max-width:480px;}
+  .node-label{
+    font-family:var(--body); font-size:11.5px; font-weight:600; fill:var(--muted-on-navy);
+    text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .node-dot{fill:var(--navy); stroke:var(--rust-light); stroke-width:1.4;}
+  .node-line{stroke:rgba(224,138,86,0.35); stroke-width:1; fill:none;}
+  .node-line.pulse{stroke-dasharray:4 5; animation:dash 22s linear infinite;}
+  @keyframes dash{to{stroke-dashoffset:-200;}}
+  .hub-circle{fill:var(--rust); }
+  .hub-text{font-family:var(--display); font-weight:600; font-size:13px; fill:var(--white);}
 
+  /* ===== Section shell ===== */
+  section{padding:96px 0;}
+  section.on-navy{background:var(--navy-deep); color:var(--white);}
+  section.on-panel{background:var(--navy); color:var(--white);}
+  .section-head{margin-bottom:52px; max-width:60ch;}
+  .section-head .eyebrow{margin-bottom:14px; display:block;}
+  .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem); margin-bottom:16px;}
+  .section-head p{color:var(--muted-on-light); font-size:1.02rem;}
+  section.on-navy .section-head p, section.on-panel .section-head p{color:var(--muted-on-navy);}
+
+  /* ===== Intro / brand positioning ===== */
+  .intro .wrap{display:grid; grid-template-columns:0.95fr 1.05fr; gap:64px; align-items:center;}
+  .intro h2{font-size:clamp(1.7rem, 3.2vw, 2.5rem); margin-bottom:22px; color:var(--navy);}
+  .intro p{color:var(--muted-on-light); font-size:1.05rem; max-width:48ch;}
+  .intro-visual{
+    aspect-ratio:4/3.1; border-radius:4px; position:relative; overflow:hidden;
+    background:var(--navy-deep);
+    background-image:
+      linear-gradient(155deg, rgba(193,89,47,0.22), transparent 55%),
+      repeating-linear-gradient(120deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 46px);
+  }
+  .intro-visual .tag{
+    position:absolute; font-family:var(--body); font-size:0.72rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--white); background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+    padding:8px 14px; border-radius:20px; backdrop-filter:blur(4px);
+  }
+
+  /* ===== Why NALA ===== */
+  .why-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--panel-line); border:1px solid var(--panel-line);}
+  .why-card{background:var(--navy-deep); padding:34px 28px; transition:background .25s ease;}
+  .why-card:hover{background:var(--navy);}
+  .why-num{font-family:var(--display); font-size:1.6rem; color:var(--rust-light); margin-bottom:22px; font-weight:500;}
+  .why-card h3{font-size:1.02rem; color:var(--white); margin-bottom:12px; letter-spacing:0.01em;}
+  .why-card p{font-size:0.92rem; color:var(--muted-on-navy);}
+
+  /* ===== Services ===== */
+  .services-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line-on-light); border:1px solid var(--line-on-light);}
+  .service-card{background:var(--white); padding:34px 28px; transition:transform .25s ease, box-shadow .25s ease;}
+  .service-card:hover{transform:translateY(-3px); box-shadow:0 14px 30px -18px rgba(15,30,56,0.35); position:relative; z-index:1;}
+  .service-top{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:26px;}
+  .service-num{font-family:var(--display); font-size:1.3rem; color:var(--muted-on-light); font-weight:500;}
+  .service-icon{width:38px; height:38px; color:var(--rust);}
+  .service-card h3{font-size:1.02rem; color:var(--navy); margin-bottom:10px;}
+  .service-card p{font-size:0.92rem; color:var(--muted-on-light);}
+
+  /* ===== Process ===== */
+  .process-strip{display:grid; grid-template-columns:repeat(4, 1fr); gap:36px; position:relative;}
+  .process-strip::before{
+    content:''; position:absolute; top:11px; left:5%; right:5%; height:1px; background:var(--panel-line);
+  }
+  .process-step{position:relative;}
+  .process-dot{width:22px; height:22px; border-radius:50%; background:var(--navy-deep); border:2px solid var(--rust-light); margin-bottom:24px; position:relative; z-index:1;}
+  .process-step h3{font-size:1rem; color:var(--white); margin-bottom:10px;}
+  .process-step p{font-size:0.9rem; color:var(--muted-on-navy);}
+
+  /* ===== Trust / editorial ===== */
+  .trust .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:start;}
+  .trust h2{font-size:clamp(1.6rem, 2.8vw, 2.2rem); color:var(--navy); margin-bottom:18px; max-width:14ch;}
+  .trust-lede{color:var(--muted-on-light); font-size:1.02rem; max-width:38ch;}
+  .capability-list{list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0;}
+  .capability-list li{
+    padding:20px 0; border-top:1px solid var(--line-on-light);
+    font-family:var(--display); font-size:1.15rem; color:var(--navy); font-weight:500;
+  }
+  .capability-list li:nth-child(-n+2){border-top:1px solid var(--line-on-light);}
+  .capability-list li span{color:var(--rust); font-family:var(--body); font-size:0.8rem; display:block; margin-bottom:4px; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;}
+
+  /* ===== About / registered details ===== */
+  .about-wrap{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
+  .about h2{color:var(--navy); font-size:clamp(1.6rem,2.8vw,2.2rem); margin-bottom:20px;}
+  .about-copy p{color:var(--muted-on-light); font-size:1.02rem; max-width:44ch;}
+  .about-copy p + p{margin-top:14px;}
   .details{
-    display:grid; grid-template-columns:1fr 1fr; gap:28px;
-    background:#fff; border:1px solid var(--line); padding:28px; border-radius:2px;
+    display:grid; grid-template-columns:1fr 1fr; gap:26px;
+    background:var(--white); border:1px solid var(--line-on-light); padding:32px; border-radius:4px;
   }
-  .detail dt{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin-bottom:4px;}
-  .detail dd{font-size:0.98rem; font-weight:600;}
+  .detail dt{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-on-light); margin-bottom:6px; font-weight:600;}
+  .detail dd{font-size:0.98rem; font-weight:600; color:var(--navy);}
 
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
-  .contact-item{margin-bottom:18px;}
-  .contact-item dt{font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); margin-bottom:4px;}
-  .contact-item dd{font-size:1rem;}
+  /* ===== Portfolio (kept from existing site) ===== */
+  .portfolio-grid{display:grid; grid-template-columns:1fr 1fr; gap:30px;}
+  .portfolio-card{border:1px solid var(--panel-line); border-radius:4px; overflow:hidden; background:var(--navy);}
+  .portfolio-card img{width:100%; border-bottom:1px solid var(--panel-line);}
+  .portfolio-card .pad{padding:26px;}
+  .portfolio-card h3{font-size:1.05rem; color:var(--white); margin-bottom:10px;}
+  .portfolio-card p{color:var(--muted-on-navy); font-size:0.92rem; margin-bottom:20px;}
 
-  footer{padding:32px 0; }
-  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.82rem; color:var(--muted);}
+  /* ===== Contact ===== */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .contact h2{color:var(--navy); font-size:clamp(1.6rem,2.8vw,2.2rem); margin-bottom:20px;}
+  .contact-item{padding:18px 0; border-top:1px solid var(--line-on-light);}
+  .contact-item:last-child{border-bottom:1px solid var(--line-on-light);}
+  .contact-item dt{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-on-light); margin-bottom:5px; font-weight:600;}
+  .contact-item dd{font-size:1rem; color:var(--navy); font-weight:500;}
+  .contact-item dd a{text-decoration:none;}
+  .contact-item dd a:hover{color:var(--rust);}
+  .contact-note{color:var(--muted-on-light); font-size:1rem; max-width:40ch; margin-bottom:28px;}
 
-  @media (max-width:640px){
-    .services{grid-template-columns:1fr;}
+  /* ===== Footer ===== */
+  footer{background:var(--navy-deep); color:var(--muted-on-navy); padding:56px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--panel-line); margin-bottom:26px;}
+  .footer-brand{display:flex; align-items:center; gap:12px; font-family:var(--display); color:var(--white); font-size:1rem; margin-bottom:14px;}
+  .footer-brand img{height:28px; width:28px; border-radius:5px;}
+  .footer-col dt{font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--rust-light); margin-bottom:10px; font-weight:600;}
+  .footer-col dd{font-size:0.9rem; margin-bottom:6px;}
+  .footer-col dd a{text-decoration:none;}
+  .footer-col dd a:hover{color:var(--white);}
+  .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.8rem;}
+  .footer-bottom a{text-decoration:none; margin-left:18px;}
+  .footer-bottom a:hover{color:var(--white);}
+
+  /* ===== Responsive ===== */
+  @media (max-width:980px){
+    .hero .wrap{grid-template-columns:1fr; gap:48px;}
+    .hero-graphic{order:-1;}
+    .hero-graphic svg{max-width:340px;}
+    .intro .wrap, .trust .wrap, .about-wrap, .contact-grid{grid-template-columns:1fr; gap:36px;}
+    .why-grid{grid-template-columns:repeat(2, 1fr);}
+    .services-grid{grid-template-columns:repeat(2, 1fr);}
+    .process-strip{grid-template-columns:repeat(2, 1fr); row-gap:40px;}
+    .process-strip::before{display:none;}
+    .portfolio-grid{grid-template-columns:1fr;}
+    .capability-list{grid-template-columns:1fr;}
+  }
+  @media (max-width:760px){
+    nav.primary-nav{
+      position:fixed; top:78px; left:0; right:0; bottom:0;
+      background:var(--navy-deep); flex-direction:column; align-items:stretch;
+      padding:20px 24px; gap:2px; transform:translateX(100%);
+      transition:transform .3s ease; overflow-y:auto;
+    }
+    nav.primary-nav.open{transform:translateX(0);}
+    nav.primary-nav a{padding:16px 6px; border-bottom:1px solid var(--panel-line); border-radius:0; font-size:0.98rem;}
+    nav.primary-nav a.active::after{display:none;}
+    nav.primary-nav a.active{color:var(--rust-light);}
+    .header-cta .btn.outline-dark{display:none;}
+    .menu-toggle{display:flex;}
+    .why-grid, .services-grid{grid-template-columns:1fr;}
     .details{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
-    nav a{margin-left:16px;}
+    section{padding:72px 0;}
+    .hero{padding:60px 0 64px;}
   }
 </style>
 <script type="application/ld+json">
@@ -110,7 +291,7 @@
   "alternateName": "NALA Digital Marketing Services",
   "image": "https://nala-digitalmarketingservices.xyz/logo.svg",
   "url": "https://nala-digitalmarketingservices.xyz/",
-  "telephone": "+639345909530",
+  "telephone": "+639171537925",
   "email": "contact@nala-digitalmarketingservices.xyz",
   "priceRange": "$$",
   "address": {
@@ -129,7 +310,7 @@
   "sameAs": [
     "https://www.facebook.com/share/14qjCfwXE6E/"
   ],
-  "description": "NALA- Digital Marketing Services is a DTI-registered digital marketing agency based in Talon Dos, Las Piñas City, NCR, Philippines, offering social media management, paid ad campaigns, content creation, and marketing consultation."
+  "description": "NALA- Digital Marketing Services is a DTI-registered digital marketing agency based in Talon Dos, Las Piñas City, NCR, Philippines, offering social media management, paid advertising, chat automation, CRM automation, content strategy, and business process automation."
 }
 </script>
 </head>
@@ -137,26 +318,126 @@
 
 <header>
   <div class="wrap">
-    <div class="brand" style="text-transform:uppercase; font-weight:800;"><img src="logo.svg" alt="NALA logo"><span class="brand-text">NALA<span class="dash">-</span> DIGITAL MARKETING SERVICES</span></div>
-    <nav>
+    <a href="#home" class="brand">
+      <img src="logo.svg" alt="NALA logo">
+      <span>NALA<span class="dash">-</span> <span class="sub">DIGITAL MARKETING SERVICES</span></span>
+    </a>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#home" class="active">Home</a>
       <a href="#services">Services</a>
-      <a href="#projects">Work</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
-      <a href="https://www.facebook.com/share/14qjCfwXE6E/" target="_blank" rel="noopener">Facebook</a>
     </nav>
+    <div class="header-cta">
+      <a href="tel:+639171537925" class="btn outline-dark" style="display:none;">Call</a>
+      <a href="#contact" class="btn rust">Start a Project</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="wrap">
-    <div class="eyebrow">Talon Dos, Las Piñas City · NCR, Philippines</div>
-    <h1>Digital marketing, <em>run properly.</em></h1>
-    <p class="lede">NALA- Digital Marketing Services helps small and growing businesses plan, launch, and manage their online presence — from social media to paid campaigns.</p>
-    <div class="cta-row">
-      <a href="#contact" class="btn primary">Get in touch</a>
-      <a href="https://wa.me/639345909530" target="_blank" rel="noopener" class="btn ghost" style="border-color:#25D366; color:#25D366;">WhatsApp us</a>
-      <a href="#services" class="btn ghost">See services</a>
+    <div class="hero-copy">
+      <span class="eyebrow">Talon Dos, Las Piñas City · NCR, Philippines</span>
+      <h1>Digital Marketing,<br><span class="accent">Built to Perform.</span></h1>
+      <p class="lede">NALA- Digital Marketing Services helps businesses strengthen their online presence through digital marketing, paid advertising, social media, automation, CRM systems, and business process solutions.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn rust">Start a Project</a>
+        <a href="#portfolio" class="btn outline-dark">View Our Work</a>
+      </div>
+      <div class="category-line">
+        <span>MARKETING</span><span class="dot">•</span><span>ADVERTISING</span><span class="dot">•</span><span>AUTOMATION</span><span class="dot">•</span><span>CRM</span>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <svg viewBox="0 0 460 440" xmlns="http://www.w3.org/2000/svg">
+        <line class="node-line pulse" x1="230" y1="220" x2="230" y2="60"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="380" y2="120"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="400" y2="290"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="290" y2="390"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="130" y2="390"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="60" y2="270"/>
+        <line class="node-line pulse" x1="230" y1="220" x2="80" y2="120"/>
+
+        <circle class="hub-circle" cx="230" cy="220" r="34"/>
+        <text class="hub-text" x="230" y="225" text-anchor="middle">NALA</text>
+
+        <circle class="node-dot" cx="230" cy="60" r="26"/>
+        <text class="node-label" x="230" y="24" text-anchor="middle">Marketing</text>
+
+        <circle class="node-dot" cx="380" cy="120" r="26"/>
+        <text class="node-label" x="380" y="85" text-anchor="middle">Advertising</text>
+
+        <circle class="node-dot" cx="400" cy="290" r="26"/>
+        <text class="node-label" x="400" y="335" text-anchor="middle">Analytics</text>
+
+        <circle class="node-dot" cx="290" cy="390" r="26"/>
+        <text class="node-label" x="290" y="432" text-anchor="middle">Automation</text>
+
+        <circle class="node-dot" cx="130" cy="390" r="26"/>
+        <text class="node-label" x="130" y="432" text-anchor="middle">CRM</text>
+
+        <circle class="node-dot" cx="60" cy="270" r="26"/>
+        <text class="node-label" x="60" y="315" text-anchor="middle">Social</text>
+
+        <circle class="node-dot" cx="80" cy="120" r="26"/>
+        <text class="node-label" x="80" y="85" text-anchor="middle">Strategy</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--rust); display:block; margin-bottom:14px;">Who We Are</span>
+      <h2>Digital Solutions for Modern Businesses</h2>
+      <p>We combine digital marketing, advertising, automation, CRM, and creative strategy to help businesses build stronger digital operations and customer experiences.</p>
+    </div>
+    <div class="intro-visual">
+      <span class="tag" style="top:12%; left:8%;">Automation</span>
+      <span class="tag" style="top:44%; left:52%;">CRM Systems</span>
+      <span class="tag" style="top:74%; left:12%;">Paid Media</span>
+      <span class="tag" style="top:20%; left:62%;">Analytics</span>
+    </div>
+  </div>
+</section>
+
+<section class="on-navy" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why NALA</span>
+      <h2>Built around how your business actually runs</h2>
+      <p>Four principles guide every engagement, from a single ad campaign to a full digital system.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>Practical Strategy</h3>
+        <p>Digital solutions designed around real business objectives, not generic playbooks.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Smart Automation</h3>
+        <p>Reduce repetitive work through intelligent workflows and automation.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Customer Focused</h3>
+        <p>Build better systems for customer engagement and follow-up.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>Connected Digital Systems</h3>
+        <p>Connect marketing, advertising, CRM, and business processes into one system.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -164,48 +445,131 @@
 <section id="services">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num">01</span>
-      <h2>Services</h2>
+      <span class="eyebrow" style="color:var(--rust);">What We Do</span>
+      <h2 style="color:var(--navy);">Digital marketing and business solutions built to work together</h2>
+      <p>Digital marketing and business solutions designed to help businesses attract, engage, and manage customers.</p>
     </div>
-    <div class="services">
-      <div class="service">
-        <h3>Social media management</h3>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">01</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4"/></svg>
+        </div>
+        <h3>Social Media Management</h3>
         <p>Content planning, posting, and page management across social platforms.</p>
       </div>
-      <div class="service">
-        <h3>Paid ad campaigns</h3>
-        <p>Setup and management of ad campaigns for reach, leads, and sales.</p>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">02</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+        </div>
+        <h3>Paid Advertising</h3>
+        <p>Setup and management of ad campaigns built for reach, leads, and sales.</p>
       </div>
-      <div class="service">
-        <h3>Content & creatives</h3>
-        <p>Graphics, captions, and short-form content built for each platform.</p>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">03</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5h16v10H8l-4 4z"/></svg>
+        </div>
+        <h3>Chat &amp; Messenger Automation</h3>
+        <p>Automated conversations that respond, qualify, and follow up with customers.</p>
       </div>
-      <div class="service">
-        <h3>Marketing consultation</h3>
-        <p>Strategy and planning support for businesses starting their online presence.</p>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">04</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3>CRM Automation</h3>
+        <p>Pipeline tracking and workflows that keep leads and clients organized.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">05</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg>
+        </div>
+        <h3>Content &amp; Creative Strategy</h3>
+        <p>Graphics, captions, and content built with a clear plan for each platform.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">06</span>
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.2 2"/></svg>
+        </div>
+        <h3>Business Process Automation</h3>
+        <p>Streamline day-to-day operations by connecting the tools you already use.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section class="on-panel" id="process">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num">02</span>
-      <h2>About</h2>
+      <span class="eyebrow">How We Work</span>
+      <h2>A clear process from strategy to system</h2>
+      <p>Every engagement follows the same disciplined sequence, whatever the size of the project.</p>
     </div>
+    <div class="process-strip">
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <h3>Discover</h3>
+        <p>We review your current digital presence, goals, and operations.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <h3>Strategize</h3>
+        <p>We map the marketing, advertising, and automation approach for your business.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <h3>Build &amp; Automate</h3>
+        <p>We set up campaigns, content systems, and connected automation.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <h3>Optimize</h3>
+        <p>We monitor performance and refine the system as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--rust); display:block; margin-bottom:14px;">Professional Digital Services</span>
+      <h2>A connected approach to digital growth</h2>
+      <p class="trust-lede">Rather than treating each channel separately, we build them to work as one system.</p>
+    </div>
+    <ul class="capability-list">
+      <li><span>Reach</span>Digital Marketing</li>
+      <li><span>Spend</span>Advertising</li>
+      <li><span>Efficiency</span>Automation</li>
+      <li><span>Relationships</span>CRM</li>
+      <li><span>Direction</span>Creative Strategy</li>
+      <li><span>Operations</span>Business Solutions</li>
+    </ul>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-wrap">
     <div class="about">
-      <p>NALA- Digital Marketing Services is a business name registered with the Department of Trade and Industry (DTI), Philippines, operating out of Talon Dos, City of Las Piñas, NCR.</p>
-      <p>We work directly with business owners to build a simple, consistent digital presence — without the overhead of a large agency.</p>
+      <h2>About NALA</h2>
+      <div class="about-copy">
+        <p>NALA- Digital Marketing Services is a business name registered with the Department of Trade and Industry (DTI), Philippines, operating out of Talon Dos, City of Las Piñas, NCR.</p>
+        <p>We work directly with business owners to build a connected digital presence — marketing, advertising, automation, and CRM working as one system, without the overhead of a large agency.</p>
+      </div>
     </div>
-    <br>
     <dl class="details">
       <div class="detail">
-        <dt>Registered business name</dt>
+        <dt>Registered Business Name</dt>
         <dd>NALA- DIGITAL MARKETING SERVICES</dd>
       </div>
       <div class="detail">
-        <dt>Registered owner</dt>
+        <dt>Registered Owner</dt>
         <dd>ROMEO CREDO CUYACOT</dd>
       </div>
       <div class="detail">
@@ -213,35 +577,35 @@
         <dd>8397254</dd>
       </div>
       <div class="detail">
-        <dt>Registered address</dt>
+        <dt>Registered Address</dt>
         <dd>TALON DOS, CITY OF LAS PIÑAS, NCR - NATIONAL CAPITAL REGION</dd>
       </div>
     </dl>
   </div>
 </section>
 
-<section id="projects">
+<section class="on-navy" id="portfolio">
   <div class="wrap">
     <div class="section-head">
-      <span class="section-num">03</span>
+      <span class="eyebrow">Portfolio</span>
       <h2>What we've built</h2>
+      <p>A look at custom dashboards and automation tools we've developed for clients — built with n8n workflows for real-time reporting and lead management.</p>
     </div>
-    <p style="color:var(--muted); max-width:60ch; margin-bottom:32px;">A look at custom dashboards and automation tools we've developed for clients — built with n8n workflows for real-time reporting and lead management.</p>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
-      <div style="border:1px solid var(--line); border-radius:2px; overflow:hidden; background:#fff;">
-        <img src="meta-ads-overview.png" alt="Meta Ads performance dashboard" style="width:100%; display:block; border-bottom:1px solid var(--line);">
-        <div style="padding:20px;">
-          <h3 style="font-size:1.05rem; margin-bottom:8px;">Meta Ads Performance Dashboard</h3>
-          <p style="color:var(--muted); font-size:0.95rem; margin-bottom:16px;">Live campaign tracking with AI-generated recommendations, model-level breakdowns, and account health scoring — built with n8n automation.</p>
-          <a href="https://mitsubishimeong-debug.github.io/mitsubishi-meta-ads-dashboard/" target="_blank" rel="noopener" class="btn primary" style="font-size:0.85rem; padding:10px 20px;">View Live Dashboard</a>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <img src="meta-ads-overview.png" alt="Meta Ads performance dashboard">
+        <div class="pad">
+          <h3>Meta Ads Performance Dashboard</h3>
+          <p>Live campaign tracking with AI-generated recommendations, model-level breakdowns, and account health scoring — built with n8n automation.</p>
+          <a href="https://mitsubishimeong-debug.github.io/mitsubishi-meta-ads-dashboard/" target="_blank" rel="noopener" class="btn rust">View Live Dashboard</a>
         </div>
       </div>
-      <div style="border:1px solid var(--line); border-radius:2px; overflow:hidden; background:#fff;">
-        <img src="crm-quotation.png" alt="CRM quotation tool" style="width:100%; display:block; border-bottom:1px solid var(--line);">
-        <div style="padding:20px;">
-          <h3 style="font-size:1.05rem; margin-bottom:8px;">Sales CRM & Loan Application System</h3>
-          <p style="color:var(--muted); font-size:0.95rem; margin-bottom:16px;">Pipeline tracking, instant quotation generator, and auto-loan application forms — streamlining the full sales process end to end.</p>
-          <a href="https://mitsubishimeong-debug.github.io/CT-Citimotors-Dashboard/" target="_blank" rel="noopener" class="btn primary" style="font-size:0.85rem; padding:10px 20px;">View Live Dashboard</a>
+      <div class="portfolio-card">
+        <img src="crm-quotation.png" alt="CRM quotation tool">
+        <div class="pad">
+          <h3>Sales CRM &amp; Loan Application System</h3>
+          <p>Pipeline tracking, instant quotation generator, and auto-loan application forms — streamlining the full sales process end to end.</p>
+          <a href="https://mitsubishimeong-debug.github.io/CT-Citimotors-Dashboard/" target="_blank" rel="noopener" class="btn rust">View Live Dashboard</a>
         </div>
       </div>
     </div>
@@ -249,53 +613,108 @@
 </section>
 
 <section id="contact">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="section-num">04</span>
+  <div class="wrap contact-grid">
+    <div class="contact">
       <h2>Contact</h2>
+      <p class="contact-note">For inquiries about services, rates, or availability, reach out by email and we'll get back to you within one business day.</p>
+      <a href="#contact" class="btn rust" style="margin-top:4px;">Start a Project</a>
     </div>
-    <div class="contact-grid">
-      <div>
-        <dl>
-          <div class="contact-item">
-            <dt>Email</dt>
-            <dd>contact@nala-digitalmarketingservices.xyz</dd>
-          </div>
-          <div class="contact-item">
-            <dt>Phone</dt>
-            <dd><a href="tel:+639345909530" style="color:inherit; text-decoration:none;">+63 934 590 9530</a></dd>
-          </div>
-          <div class="contact-item">
-            <dt>WhatsApp</dt>
-            <dd><a href="https://wa.me/639345909530" target="_blank" rel="noopener" style="color:inherit; text-decoration:none;">Chat on WhatsApp →</a></dd>
-          </div>
-          <div class="contact-item">
-            <dt>Location</dt>
-            <dd>Talon Dos, City of Las Piñas, NCR - National Capital Region</dd>
-          </div>
-          <div class="contact-item">
-            <dt>Business Hours</dt>
-            <dd>Monday–Saturday, 9:00 AM–6:00 PM</dd>
-          </div>
-          <div class="contact-item">
-            <dt>Facebook</dt>
-            <dd><a href="https://www.facebook.com/share/14qjCfwXE6E/" target="_blank" rel="noopener" style="color:inherit;">NALA- Digital Marketing Services</a></dd>
-          </div>
-        </dl>
+    <dl>
+      <div class="contact-item">
+        <dt>Email</dt>
+        <dd><a href="mailto:contact@nala-digitalmarketingservices.xyz">contact@nala-digitalmarketingservices.xyz</a></dd>
       </div>
-      <div>
-        <p style="color:var(--muted); max-width:40ch;">For inquiries about services, rates, or availability, reach out by email and we'll get back to you within one business day.</p>
+      <div class="contact-item">
+        <dt>Phone</dt>
+        <dd><a href="tel:+639171537925">+63 917 153 7925</a></dd>
       </div>
-    </div>
+      <div class="contact-item">
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/639171537925" target="_blank" rel="noopener">Chat on WhatsApp →</a></dd>
+      </div>
+      <div class="contact-item">
+        <dt>Location</dt>
+        <dd>TALON DOS, CITY OF LAS PIÑAS, NCR - NATIONAL CAPITAL REGION</dd>
+      </div>
+      <div class="contact-item">
+        <dt>Business Hours</dt>
+        <dd>Monday–Saturday, 9:00 AM–6:00 PM</dd>
+      </div>
+      <div class="contact-item">
+        <dt>Facebook</dt>
+        <dd><a href="https://www.facebook.com/share/14qjCfwXE6E/" target="_blank" rel="noopener">NALA- Digital Marketing Services</a></dd>
+      </div>
+    </dl>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© 2026 NALA- Digital Marketing Services. DTI Business Name No. 8397254.</span>
-    <span><a href="privacy.html" style="color:var(--muted);">Privacy Policy</a> · <a href="terms.html" style="color:var(--muted);">Terms of Service</a> · Talon Dos, Las Piñas City, NCR</span>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.svg" alt="NALA logo">
+          <span>NALA- DIGITAL MARKETING SERVICES</span>
+        </div>
+        <p style="max-width:32ch; font-size:0.88rem;">Digital marketing, advertising, automation, and CRM solutions for modern businesses.</p>
+      </div>
+      <dl class="footer-col">
+        <dt>Contact</dt>
+        <dd>TALON DOS, CITY OF LAS PIÑAS, NCR - NATIONAL CAPITAL REGION</dd>
+        <dd><a href="tel:+639171537925">+63 917 153 7925</a></dd>
+        <dd><a href="mailto:contact@nala-digitalmarketingservices.xyz">contact@nala-digitalmarketingservices.xyz</a></dd>
+      </dl>
+      <dl class="footer-col">
+        <dt>Navigate</dt>
+        <dd><a href="#services">Services</a></dd>
+        <dd><a href="#portfolio">Portfolio</a></dd>
+        <dd><a href="#about">About</a></dd>
+        <dd><a href="#contact">Contact</a></dd>
+      </dl>
+      <dl class="footer-col">
+        <dt>Follow</dt>
+        <dd><a href="https://www.facebook.com/share/14qjCfwXE6E/" target="_blank" rel="noopener">Facebook</a></dd>
+        <dd><a href="https://wa.me/639171537925" target="_blank" rel="noopener">WhatsApp</a></dd>
+      </dl>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NALA- Digital Marketing Services. DTI Business Name No. 8397254.</span>
+      <span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </span>
+    </div>
   </div>
 </footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const primaryNav = document.getElementById('primaryNav');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = primaryNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+  });
+  primaryNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id], header');
+  const navLinks = document.querySelectorAll('.primary-nav a');
+  const setActive = (id) => {
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+</script>
 
 </body>
 </html>
