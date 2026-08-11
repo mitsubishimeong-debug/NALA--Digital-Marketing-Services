@@ -1,0 +1,33 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NALA- Digital Marketing Services logo, a stylized Shih Tzu wearing goggles">
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="#14213d"/>
+
+  <!-- fluffy ears -->
+  <path d="M14 22 C 6 22, 4 34, 10 42 C 14 46, 20 44, 21 38 C 22 31, 20 22, 14 22 Z" fill="#e3d9c4"/>
+  <path d="M50 22 C 58 22, 60 34, 54 42 C 50 46, 44 44, 43 38 C 42 31, 44 22, 50 22 Z" fill="#e3d9c4"/>
+
+  <!-- face -->
+  <circle cx="32" cy="34" r="15" fill="#fbf9f4"/>
+
+  <!-- fringe / forehead fur tuft -->
+  <path d="M24 21 Q 32 15, 40 21 Q 36 25, 32 23 Q 28 25, 24 21 Z" fill="#e3d9c4"/>
+
+  <!-- goggle strap -->
+  <path d="M11 29 L 53 29" stroke="#14213d" stroke-width="2.5"/>
+
+  <!-- goggles: two lenses joined by bridge -->
+  <circle cx="25" cy="31" r="8.5" fill="#c9d6d9" stroke="#14213d" stroke-width="2.5"/>
+  <circle cx="41" cy="31" r="8.5" fill="#c9d6d9" stroke="#14213d" stroke-width="2.5"/>
+  <path d="M32.5 31 L 33.5 31" stroke="#14213d" stroke-width="3"/>
+  <!-- lens shine -->
+  <path d="M21 27 Q 24 25, 27 27" stroke="#fbf9f4" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M37 27 Q 40 25, 43 27" stroke="#fbf9f4" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- nose -->
+  <ellipse cx="32" cy="42" rx="3" ry="2.3" fill="#14213d"/>
+
+  <!-- tongue out -->
+  <path d="M29 47 Q 32 56, 35 47 Q 32 50, 29 47 Z" fill="#c65d3b"/>
+
+  <!-- digital signal accent -->
+  <circle cx="50" cy="14" r="3.5" fill="#3c5b4a"/>
+</svg>
